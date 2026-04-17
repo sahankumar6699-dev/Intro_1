@@ -112,6 +112,8 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .btn-primary::before {
@@ -142,6 +144,8 @@
             padding: 12px 32px;
             border-radius: 8px;
             transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .btn-secondary:hover {
@@ -303,27 +307,6 @@
             to { opacity: 1; }
         }
 
-        /* Language Colors */
-        .lang-js { color: #f7df1e; }
-        .lang-py { color: #3776ab; }
-        .lang-ts { color: #3178c6; }
-        .lang-html { color: #e34f26; }
-        .lang-css { color: #1572b6; }
-        .lang-java { color: #b07219; }
-        .lang-cpp { color: #00599c; }
-        .lang-go { color: #00add8; }
-        .lang-rust { color: #dea584; }
-        .lang-php { color: #777bb4; }
-
-        /* Reduced Motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
         /* Mobile Menu */
         .mobile-menu {
             transform: translateX(100%);
@@ -332,6 +315,15 @@
 
         .mobile-menu.active {
             transform: translateX(0);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
@@ -434,15 +426,15 @@
     <section class="py-16 px-6 border-y border-gray-800 bg-[#0d0d0d]/50">
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="reveal">
-                <div class="text-4xl md:text-5xl font-bold text-[#00ff00] font-mono" id="repo-count">0</div>
+                <div class="text-4xl md:text-5xl font-bold text-[#00ff00] font-mono" id="repo-count">-</div>
                 <div class="text-gray-400 mt-2">Repositories</div>
             </div>
             <div class="reveal" style="transition-delay: 0.1s">
-                <div class="text-4xl md:text-5xl font-bold text-[#00d7ff] font-mono" id="languages-count">0</div>
+                <div class="text-4xl md:text-5xl font-bold text-[#00d7ff] font-mono" id="languages-count">-</div>
                 <div class="text-gray-400 mt-2">Languages</div>
             </div>
             <div class="reveal" style="transition-delay: 0.2s">
-                <div class="text-4xl md:text-5xl font-bold text-[#00ff00] font-mono" id="commits-count">100+</div>
+                <div class="text-4xl md:text-5xl font-bold text-[#00ff00] font-mono">100+</div>
                 <div class="text-gray-400 mt-2">Commits</div>
             </div>
             <div class="reveal" style="transition-delay: 0.3s">
@@ -520,4 +512,9 @@
                 <div class="card p-8 neon-border-blue reveal" style="transition-delay: 0.1s">
                     <div class="flex items-center gap-3 mb-4">
                         <svg class="w-8 h-8 text-[#00d7ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold">Web Applications</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Full-stack web applications bu
